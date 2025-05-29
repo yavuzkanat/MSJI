@@ -2,7 +2,6 @@
 A Java UI app to check your MYSQL tables.
 
 ## Used Library
-
 * SQL
 * JDBC
 * RS2XML
