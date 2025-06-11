@@ -1,4 +1,4 @@
-# MSJI (MySql Java Interface) _V.0.1.2925_
+# MSJI (MySql Java Interface) _V.0.1.5925_
 A Java UI app to check your MYSQL tables.
 
 ## Used Library
@@ -17,6 +17,14 @@ _Don't forget to add dependence libraries below to your IDE._
 
 * [JDBC](https://dev.mysql.com/downloads/connectorj/)
 * [RS2XML](https://sourceforge.net/projects/finalangelsanddemons/files/rs2xml.jar/download)
+
+## Versions
+### _V.0.1.2925_ Features
+* _It was added the refresh button_ 
+* Bugs was fixed
+### _V.0.1.5925_ Features
+* _It waas added the delete button_ 
+
 
 ## 🤝 Contributing
     Contributions are welcome! To contribute:
