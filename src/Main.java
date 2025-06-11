@@ -40,6 +40,17 @@ public class Main {
          return rs;
 
 
+    }public static void DeleteDB(int id ,String pK) {
+        // It's delete the selected query from UI
+        // get the primary key
+        try{
+            Connection conn = ConnectionDB();
+            PreparedStatement ps = conn.prepareStatement("DELETE FROM " + TableN + " WHERE " + pK + " = ?");
+            ps.setInt(1, id);
+            ps.executeUpdate();
+        }catch (Exception e){
+            throw new RuntimeException(e);
+        }
     }
 
 }
