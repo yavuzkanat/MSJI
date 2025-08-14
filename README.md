@@ -25,7 +25,7 @@ _Don't forget to add dependence libraries below to your IDE._
 ### _V.0.1.5925_ Features
 * _It was added the delete button._ 
 ### _V.0.1.7925_ Features
-*_It was added the ASYC & DSC button._
+* _It was added the ASYC & DSC button._
 
 
 ## 🤝 Contributing
