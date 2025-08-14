@@ -20,10 +20,12 @@ _Don't forget to add dependence libraries below to your IDE._
 
 ## Versions
 ### _V.0.1.2925_ Features
-* _It was added the refresh button_ 
+* _It was added the refresh button._ 
 * Bugs was fixed
 ### _V.0.1.5925_ Features
-* _It waas added the delete button_ 
+* _It was added the delete button._ 
+### _V.0.1.7925_ Features
+*_It was added the ASYC & DSC button._
 
 
 ## 🤝 Contributing

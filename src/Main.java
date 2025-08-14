@@ -51,6 +51,28 @@ public class Main {
         }catch (Exception e){
             throw new RuntimeException(e);
         }
+
+    }     public static ResultSet ASYCSortByID(String pK) {
+            try{
+                Connection conn = ConnectionDB();
+                PreparedStatement ps = conn.prepareStatement("SELECT * FROM " + TableN + " ORDER BY " + pK + " ASC");
+                ps.executeQuery();
+                ResultSet rs = ps.getResultSet();
+                return rs;
+            }catch (Exception e){
+                throw new RuntimeException(e);
+            }
+
+    }public static  ResultSet DescSortByID(String pK) {
+        try{
+            Connection conn = ConnectionDB();
+            PreparedStatement ps = conn.prepareStatement("SELECT * FROM " + TableN + " ORDER BY " + pK + " DESC");
+            ps.executeQuery();
+            ResultSet rs = ps.getResultSet();
+            return rs;
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
 }

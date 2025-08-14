@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
@@ -13,6 +14,8 @@ public class MainPage extends JFrame {
     private JTable table1;
     private JButton refreshButton;
     private JButton deleteButton;
+    private JButton ASCNSortButton;
+    private JButton DESNSortButton;
 
     public MainPage() {
         add(panel2);
@@ -45,6 +48,34 @@ public class MainPage extends JFrame {
                     JOptionPane.showMessageDialog(null, ex.getMessage());
                 }
 
+            }
+        });
+        ASCNSortButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    ResultSet rs = Main.QueryDB();
+                    ResultSetMetaData rsmd = rs.getMetaData();
+                    String PkName = rsmd.getColumnName(1);
+                    ResultSet rs2 = Main.ASYCSortByID(PkName);
+                    table1.setModel(DbUtils.resultSetToTableModel(rs2));
+                } catch (SQLException ex) {
+                    JOptionPane.showMessageDialog(null, ex.getMessage());
+                }
+            }
+        });
+        DESNSortButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try{
+                    ResultSet rs = Main.QueryDB();
+                    ResultSetMetaData rsmd = rs.getMetaData();
+                    String PkName = rsmd.getColumnName(1);
+                    ResultSet rs2 = Main.DescSortByID(PkName);
+                    table1.setModel(DbUtils.resultSetToTableModel(rs2));
+                }catch (SQLException ex){
+                    JOptionPane.showMessageDialog(null, ex.getMessage());
+                }
             }
         });
     }
